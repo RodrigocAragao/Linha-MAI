@@ -81,27 +81,28 @@ a:hover {
     padding-top: 60px;
 }
 
+
+
+
 .video-container {
     width: 100%;
     height: auto;
 }
 
 .video-bg {
-    width: 100%; /* Ajusta a largura do vídeo para 100% do contêiner */
-    height: auto; /* Mantém a proporção do vídeo */
-    overflow: hidden; /* Garante que o conteúdo extra seja cortado */
+    width: 100%;
+    object-fit: cover; /* Cobrirá toda a área da viewport */
+    position: relative;
 }
 
-.video-first {
-    max-height: 300px; /* Ajusta a altura máxima da faixa para a que desejas */
-    width: 100%; /* Mantém a largura total */
-    object-fit: cover; /* Garante que o vídeo preencha a área, cortando bordas se necessário */
+.video-first,.video-second {
+    height: auto; /* Ajusta a altura do primeiro vídeo */
+    max-height: 90vh;
 }
-
 
 /* Para telas menores */
 @media (max-width: 768px) {
-    .video-first {
+    .video-first, .video-second {
         height: auto; /* Ajuste para telas menores */
         max-height: 50vh;
     }
